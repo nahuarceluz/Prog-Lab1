@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1566843133 source:c:\users\alumno\desktop\mayus o minus..(funcion)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
