@@ -4,56 +4,80 @@
 
 int main()
 {
-    int opcion;
+    char opcion;
     char seguir = 's';
-    char nombre[50];
-    int edad;
-    char genero;
+    char salir;
+
+    int nota;
+    int nota2;
+    int acumulador = 0;
+    float promedio;
 
     do
     {
-            system("cls"); //limpiar pantalla
-            printf("----Menu de Opciones----\n\n");
-            printf("a- Sumar\n");
-            printf("b- Restar\n");
-            printf("c- Multiplicar\n");
-            printf("d- Dividir\n");
-            printf("e-Salir\n");
-            printf("Ingrese opcion: ");
-            //opcion = getche;
-            scanf("%c", &opcion);
+      system("cls"); //limpiar pantalla
+      printf("----Menu de Opciones----\n\n");
+      printf("1. Ingresar notas.\n");
+      printf("2. Mostrar notas ingresas.\n");
+      printf("3. Sacar promedio de las notas ingresadas.\n");
+      printf("4. Ver notas aprobadas.\n");
+      printf("5. Salir\n");
+      printf("Ingrese opcion: ");
+      //opcion = getche;
+      scanf("%c", &opcion);
 
-            switch(opcion)
-            {
-            case 'a':
-                printf("Ustedes eligio sumar.\n");
-                system("pause"); //para pausar el programa.
-                break;
-            case 'b':
-                printf("Usted eligio restar.\n");
-                system("pause");
-                break;
-            case 'c':
-                printf("Usted eligio multiplicar.\n");
-                system("pause");
-                break;
-            case 'd':
-                printf("Usted eligio dividir.\n");
-                system("pause");
-                break;
-            case 'e':
-                printf("Usted eligio salir.\n");
-                printf("Confirma salida?:  ");
-                seguir == getche();
-                printf("\n");
-                system("pause");
-                break;
-            default:
-                printf("Opcion invalida.\n");
-                system("pause");
-                break;
-            }
+      switch(opcion)
+      {
+      case '1':
+        printf("Usted eligio ingresar notas.\n");
+        printf("Ingrese primera nota: ");
+        scanf("%d", &nota);
+        printf("Ingrese segunda nota: ");
+        scanf("%d", &nota2);
+        system("pause"); //para pausar el programa.
+        break;
+      case '2':
+        printf("Usted eligio mostrar notas ingresadas.\n");
+        printf("Nota 1: %d\n", nota);
+        printf("Nota 2: %d\n", nota2);
+        system("pause");
+        break;
+      case '3':
+        printf("Usted eligio sacar promedio de las notas ingresadas.\n");
 
-            }while(seguir == 'n');
+        for (int i=0; i<2; i++)
+        {
+            printf("Ingrese numero: ");
+            scanf("%d", &nota);
 
+            acumulador = acumulador + nota;
+        }
+        promedio = (float) acumulador / 5;
+        printf("El promedio de las notas ingresas es: %.2f\n", promedio);
+        system("pause");
+        break;
+      case '4':
+        printf("Notas aprobadas:\n");
+        if(nota >=7 || nota2 >=7)
+        {
+            printf("Nota aprobada.\n.");
+        }
+        else
+        {
+            printf("Nota desaprobada.\n");
+        }
+        system("pause");
+        break;
+      case '5':
+        printf("Usted eligio salir.\n");
+        seguir = 'n';
+        break;
+      default:
+        printf("Opcion invalida.\n");
+        system("pause");
+        break;
+      }
+    }while(seguir == 's');
 }
+
+int getInt (char* nota, char* nota2, int)
