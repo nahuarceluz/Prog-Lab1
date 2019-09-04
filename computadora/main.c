@@ -17,6 +17,6 @@ int main()
     printf("\n***************************");
     printf("***************************\n\n");
     printf("Su nombre es %s, tiene %d anios y su genero es %s.\n", &nombre, edad, &genero);
-    printf("Bienvenido, su registro se completo correctamente.\n");
+    printf("Bienvenido %s, su registro se completo correctamente.\n");
 
 }
