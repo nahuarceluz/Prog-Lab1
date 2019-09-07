@@ -15,7 +15,7 @@ int main()
     printf("Ingrese numero: ");
     scanf("%d", &numero2);
 
-   suma = sumar1(numero1, numero2); //Llamada de la funcion. Le paso dos enteros.
+    suma = sumar1(numero1, numero2); //Llamada de la funcion. Le paso dos enteros.
 
     printf("La suma de los numeros es %d.\n", suma);
     return 0;
@@ -23,9 +23,11 @@ int main()
 
 int sumar1(int a, int b) //desarrollo de la funcion
 {
-    int suma;
+    for (int i=0; i<5; i++)
+    {
+        printf("Ingrese numero: ");
+        scanf("%d", &numero);
 
-    suma = a + b;
-
-    return suma;
+        acumulador = acumulador + numero;
+    }
 }

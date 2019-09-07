@@ -79,5 +79,3 @@ int main()
       }
     }while(seguir == 's');
 }
-
-int getInt (char* nota, char* nota2, int)

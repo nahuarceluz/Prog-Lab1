@@ -4,42 +4,25 @@
 char menu();
 
 int main()
+{
+    int seguir = 's';
 
-switch(menu())
-      {
-      case 'a':
-        printf("Ustedes eligio sumar.\n");
-        system("pause"); //para pausar el programa.
-        break;
-      case 'b':
-        printf("Usted eligio restar.\n");
+    switch(menu())
+    {
+    case 'a':
+        printf("Usted eligio ver esto.\n");
         system("pause");
         break;
-      case 'c':
-        printf("Usted eligio multiplicar.\n");
+    case 'b':
+        printf("Usted no sabe programar..\n");
         system("pause");
         break;
-      case 'd':
-        printf("Usted eligio dividir.\n");
-        system("pause");
-        break;
-      case 'e':
-        printf("Usted eligio salir.\n");
-        printf("Confirma salida?:  ");
-        seguir == getche();
-        system("pause");
-        break;
-      default:
-        printf("Opcion invalida.\n");
-        system("pause");
-        break;
-      }
-
-return 0;
+    }
+}
 
 char menu()
 {
-    char seguir == 's';
+    char seguir = 's';
     char opcion;
 
     do

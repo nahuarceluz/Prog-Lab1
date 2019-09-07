@@ -1,5 +1,9 @@
 # depslib dependency file v1.0
-1567609979 source:c:\users\alumno\desktop\busqueda\main.c
+1567609924 source:c:\users\alumno\desktop\busqueda\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1567609952 source:c:\users\faby\desktop\nahu\prog - lab i\#5 clase\vectores\busqueda\main.c
 	<stdio.h>
 	<stdlib.h>
 

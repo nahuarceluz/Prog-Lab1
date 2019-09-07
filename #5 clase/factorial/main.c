@@ -5,19 +5,24 @@ int factorial (int);
 
 int main()
 {
-    printf("El factorial del numero es %d", factorial(5));
+    int numero;
+    printf("Ingrese numero: ");
+    scanf("%d", &numero);
+    numero = factorial(numero);
+    printf("El factorial del  numero es %d.\n", numero);
     //para sacar el factorial de un numero grande se pone %lli (long long int)
 }
 int factorial (int x)
 {
-    int factorial = 1;
+    int fact;
 
-    if(x > 1)
+    if(x == 1)
     {
-        factorial = x * factorial(x-1);
+        return 1;
     }
 
-    return factorial;
+    fact = x * factorial(x-1);
+    return fact;
 
     //int factorial = 1;
 
