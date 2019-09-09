@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 int getIntEdad(int*, char* );
+void mostrarVectorChar(char, int);
 
 int main()
 {
-    char nombre[50];
+    char nombre[] = {'N', 'a', 'h', 'u', 'e', '\0'};
     char siguiente;
     int edad;
     int datoEdad;
@@ -19,10 +20,7 @@ int main()
         scanf("%c", &siguiente);
         if(siguiente == 's')
         {
-            printf("Como te llamas?: ");
-            fflush(stdin);
-            scanf("%s", &nombre);
-            printf("Bienvenido otra vez %s!\n", nombre);
+            mostrarVectorChar(nombre, 5);
 
             printf("Desea continuar? s/n: ");
             scanf("%s", &siguiente);
@@ -97,12 +95,10 @@ int getIntEdad(int* numero, char* mensaje)
     return edad;
 }
 
-char getCharNombre(char* letra, char* mensaje)
+void mostrarVectorChar(char vector[], int tam)
 {
-    char nombre[50];
-
-    printf("%s", mensaje);
-    scanf("%s", &nombre);
-
-    return nombre;
+    for(int i=0; i<tam; i++)
+    {
+        printf("%s", vector[i]);
+    }
 }
