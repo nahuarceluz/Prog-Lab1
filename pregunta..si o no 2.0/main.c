@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int getIntEdad(int*, char* );
+
 int main()
 {
     char nombre[50];
     char siguiente;
     int edad;
+    int datoEdad;
     char genero[50];
     int nota;
     //AGREGAR: menu de opciones y flag.
@@ -25,9 +28,7 @@ int main()
             scanf("%s", &siguiente);
             if(siguiente == 's')
             {
-                printf("Cual es su edad?: ");
-                fflush(stdin);
-                scanf("%d", &edad);
+                datoEdad = getIntEdad(edad, "Ingrese edad: ");
 
                 printf("Desea continuar? s/n: ");
                 fflush(stdin);
@@ -54,7 +55,7 @@ int main()
                         {
                             printf("\n");
                             printf("Nombre: %s\n", nombre);
-                            printf("Edad: %d\n", edad);
+                            printf("Edad: %d\n", datoEdad);
                             printf("Genero: %s\n", genero);
                             printf("Nota: %d\n", nota);
                             return 0;
@@ -84,4 +85,24 @@ int main()
 
 
     }while(siguiente=='s');
+}
+
+int getIntEdad(int* numero, char* mensaje)
+{
+    int edad;
+
+    printf("%s", mensaje);
+    scanf("%d", &edad);
+
+    return edad;
+}
+
+char getCharNombre(char* letra, char* mensaje)
+{
+    char nombre[50];
+
+    printf("%s", mensaje);
+    scanf("%s", &nombre);
+
+    return nombre;
 }
