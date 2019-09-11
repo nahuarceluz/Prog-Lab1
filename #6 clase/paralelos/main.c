@@ -5,6 +5,7 @@
 
 void mostrarAlumnos(int leg[], int age[], char sex[], int n1[], int n2[], float prom[], int tam);
 void mostrarAlumno(int leg, int age, char sex, int n1, int n2, float prom);
+void ordenarAlumnos(int leg[], int age[], char sexo[], int n1[], int n2[], float prom[], int tam, int criterio);
 
 int main()
 {
@@ -36,6 +37,7 @@ int main()
         promedios[i] = (float) (notap1[i] + notap2[i]) / 2;
     }
 
+    ordenarAlumnos(legajos, edades, sexos, notap1, notap2, promedios, TAM, 0);
     mostrarAlumnos(legajos, edades, sexos, notap1, notap2, promedios, TAM);
 
     return 0;
@@ -55,4 +57,29 @@ void mostrarAlumnos(int leg[], int age[], char sex[], int n1[], int n2[], float 
 void mostrarAlumno(int leg, int age, char sex, int n1, int n2, float prom)
 {
     printf("%d       %d       %c       %d       %d       %.2f\n", leg, age, sex, n1, n2, prom);
+}
+
+void ordenarAlumnos(int leg[], int age[], char sexo[], int n1[], int n2[], float prom[], int tam, int criterio)
+{
+    int aux;
+
+    for(int i = 0; i < TAM-1; i++)
+    {
+        for(int j = i + 1; j < TAM; j++)
+        {
+            if(leg[j] < leg[i] && criterio == 0)
+            {
+                aux = leg[j];
+                leg[j] = leg[i];
+                leg [i] = aux;
+
+            }
+            else if(leg[j] > leg[i] && criterio == 1)
+            {
+                aux = leg[j];
+                leg[j] = leg[i];
+                leg[i] = aux;
+            }
+        }
+    }
 }
