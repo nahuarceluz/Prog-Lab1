@@ -1,13 +1,23 @@
 # depslib dependency file v1.0
-1567958206 source:c:\users\faby\desktop\nahu\prog - lab i\pregunta..si o no 2.0\main.c
+1568775911 source:c:\users\faby\desktop\nahu\prog - lab i\pregunta..si o no 2.0\main.c
 	<stdio.h>
 	<stdlib.h>
+	"funciones.h"
 
-1567958208 source:e:\pregunta..si o no 2.0\main.c
+1568776258 source:e:\pregunta..si o no 2.0\main.c
 	<stdio.h>
 	<stdlib.h>
+	"funciones.h"
 
 1567011344 source:e:\pregunta..si o no 2.0 2\main.c
 	<stdio.h>
 	<stdlib.h>
+
+1568776201 source:c:\users\faby\desktop\nahu\prog - lab i\pregunta..si o no 2.0\funciones.c
+
+1568775947 c:\users\faby\desktop\nahu\prog - lab i\pregunta..si o no 2.0\funciones.h
+
+1568776202 source:e:\pregunta..si o no 2.0\funciones.c
+
+1568775948 e:\pregunta..si o no 2.0\funciones.h
 

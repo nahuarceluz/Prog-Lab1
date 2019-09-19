@@ -95,13 +95,15 @@ void mostrarAlumnos(char nom[][20], int leg[], int age[], char sex[], int n1[], 
     printf("\n\n");
 }
 
-void mostrarAlumno(char nom[], int leg, int age, char sexo, int nota1, int nota2, float promedio){
+void mostrarAlumno(char nom[], int leg, int age, char sexo, int nota1, int nota2, float promedio)
+{
 
     printf("    %d  %10s    %d    %c     %2d      %2d      %.2f\n",leg, nom, age, sexo, nota1, nota2, promedio);
 
 }
 
-void ordenarAlumnosLeg(char nom[][20],  int leg[], int age[], char sex[], int n1[], int n2[], float prom[], int tam){
+void ordenarAlumnosLeg(char nom[][20],  int leg[], int age[], char sex[], int n1[], int n2[], float prom[], int tam)
+{
 
     int auxInt;
     float auxFloat;
