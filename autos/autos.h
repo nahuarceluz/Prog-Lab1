@@ -7,6 +7,15 @@ typedef struct
     int anio;
 } eAutos;
 
-void mostrarAlumno(eAutos x);
-void mostrarAlumnos(eAutos vec[], int tam);
-void ordenarAlumnos(eAutos vec[], int tam);
+void mostrarAuto(eAutos x);
+void mostrarAutos(eAutos vec[], int tam);
+void ordenarAutos(eAutos vec[], int tam);
+void inicializarAlumnos(eAutos alumnos[], int tam);
+int buscarLibre(eAutos alumnos[], int tam);
+int buscarAuto(int numeroDeSerie, eAutos alumnos[], int tam);
+eAutos newAuto(int numeroDeSerie, char marca[], char modelo[], int precio, int anio);
+int altaAuto(eAutos autos[], int tam);
+int bajaAuto(eAutos autos[], int tam);
+int menu();
+
+/*int modificarAuto(eAutos autos[], int tam);*/

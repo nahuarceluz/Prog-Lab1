@@ -6,18 +6,41 @@
 
 int main()
 {
+    char salir = 's';
     eAutos coche [TAM] =
     {
-    {102, "Renault", "Doce", 15000, 1980},
-    {100, "Chevrolet", "Corsa", 30000, 2006},
-    {101, "Ford", "Fiesta", 60000, 1996},
+        {102, "Renault", "Doce", 15000, 1980},
+        {100, "Chevrolet", "Corsa", 30000, 2006},
+        {101, "Ford", "Fiesta", 60000, 1996}
     };
-    printf("Desordenados\n");
-    mostrarAlumnos(coche, TAM);
 
-    printf("\nOrdenados\n");
-    ordenarAlumnos(coche, TAM);
-    mostrarAlumnos(coche, TAM);
+    /*eAutos coche[TAM];
+    inicializarAuto(coche, TAM);*/
+
+    do
+    {
+        switch(menu())
+        {
+        case 1:
+            altaAuto(coche, TAM);
+            break;
+        case 2:
+            bajaAuto(coche, TAM);
+            break;
+        case 3:
+            mostrarAutos(coche, TAM);
+            break;
+        case 4:
+            ordenarAutos(coche, TAM);
+            break;
+        case 5:
+            printf("Bye\n");
+            salir = 's';
+        }
+        system("pause");
+
+    }
+    while(salir == 's');
 }
 
 
