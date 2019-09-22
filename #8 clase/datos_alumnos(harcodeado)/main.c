@@ -86,10 +86,12 @@ int main()
     return 0;
 }
 
-void mostrarAlumnos(char nom[][20], int leg[], int age[], char sex[], int n1[], int n2[], float prom[], int tam){
+void mostrarAlumnos(char nom[][20], int leg[], int age[], char sex[], int n1[], int n2[], float prom[], int tam)
+{
 
     printf("  Legajo      Nombre  Edad  Sexo  Nota1  Nota2  Promedio\n\n");
-    for(int i=0; i < tam; i++){
+    for(int i=0; i < tam; i++)
+    {
       mostrarAlumno( nom[i], leg[i], age[i], sex[i], n1[i], n2[i], prom[i]);
     }
     printf("\n\n");

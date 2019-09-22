@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include <string.h> //guarda funciones de tipo de cadena. ejemplo: strcpy
 
 void mostrarVectorChar(char vec[], int tam);
@@ -43,38 +44,48 @@ int main()
         strcpy(nombre, auxCad);
         printf("%s\n", nombre);*/
 
-        //STRNCPY:  muestra hasta donde le lego con el tamño(9);
-        //Ejemplo:
-        /*char nombre[10];
-        strncpy(nombre, "juan alberto matias", 9);
-        puts(nombre);*/
+    //STRNCPY:  muestra hasta donde le llego con el tamaño(9);
+    //Ejemplo:
+    /*char nombre[10];
+    strncpy(nombre, "juan alberto matias", 9);
+    puts(nombre);*/
 
-        //STRCMP: compara dos cadenas. Devuelve tres valores:
-        //-1: n1 esta ANTES que n2 en el diccionario.
-        //0: son iguales.
-        //1: n1 esta DESPUES que n2 en el diccionario.
-        //Ejemplo:
-        /*char n1[10] = "Juan";
-        char n2[10] = "juana";
-        int x;
+    //STRCMP: compara dos cadenas. Devuelve tres valores:
+    //-1: n1 esta ANTES que n2 en el diccionario.
+    //0: son iguales.
+    //1: n1 esta DESPUES que n2 en el diccionario.
+    //Ejemplo:
+    /*char n1[10] = "Juan";
+    char n2[10] = "juana";
+    int x;
 
-        x = strcmp(n1, n2);
-        printf("%d", x);*/
-
-
-        //STRICMP = no hace diferencia entre MAYUSCULA y minuscula.
+    x = strcmp(n1, n2);
+    printf("%d", x);*/
 
 
-        //STRCAT: une dos cadenas.
-        //Ejemplo:
-        char n1[10] = "Juan";
-        char n2[10] = "a";
-        //char n3[20]; //no tiene que ser menor a 19 porque se desborda;
-        strcat(n1, n2);
-        printf("%s\n", n1);
+    //STRICMP = no hace diferencia entre MAYUSCULA y minuscula.
 
-        return 0;
-}
+
+    //STRCAT: une dos cadenas.
+    //Ejemplo:
+    /*char n1[10] = "Juan";
+    char n2[10] = "a";
+    //char n3[20]; //no tiene que ser menor a 19 porque se desborda;
+    strcat(n1, n2);
+    printf("%s\n", n1);*/
+
+    //STRUPR: muestra la cadena en MAYUSCULA
+    /*char n1[10] = "juan";
+    char n2[10] = "A";
+    strupr(n1);
+    printf("%s\n", n1);
+    //STRLWR// muestra la cadena en MINUSCULA.
+    strlwr(n2);
+    printf("%s\n", n2);
+
+    //n2[0] = toupper(n2[0]);*/
+
+    return 0;
 
 void mostrarVectorChar(char vec[], int tam)
 {

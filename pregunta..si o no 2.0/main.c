@@ -52,70 +52,42 @@ int main()
                         scanf("%d", &nota);
 
                         printf("El registro se completo correctamente..\n");
-                        printf("Presione cualquier tecla para ingresar al menu: ");
+                        printf("Presione la stecla s para mostrar los datos ingresados..");
                         scanf("%s", &siguiente);
                         if(siguiente == 's')
                         {
-                            char seguir = 's';
-                            char opcion;
+                            printf("Nombre: %s\n", nombre);
+                            printf("Edad: %d\n", edad);
+                            printf("Genero: %s\n", genero);
+                            printf("Nota: %d\n", nota);
 
-                            do
-                            {
-                                system("cls"); //limpiar pantalla
-                                printf("Bienvenido al menu de opciones!\n");
-                                printf("1. Mostrar datos ingresados.\n");
-                                printf("2. Salir\n");
-                                printf("Ingrese opcion: ");
-                                //opcion = getche;
-                                scanf("%c", &opcion);
-
-                                switch(opcion)
-                                {
-                                case '1':
-                                    printf("\n");
-                                    /*printf("Datos ingresados: \n");
-                                    printf("Nombre: %s\n", nombre);
-                                    printf("Edad: %d\n", edad);
-                                    printf("Genero: %s\n", genero);
-                                    printf("Nota: %d\n", nota);*/
-                                    mostrarDatos(nombre, edad, genero, nota);
-                                    system("pause");
-                                    break;
-                                case '2':
-                                    printf("Usted eligio salir.");
-                                    seguir = 'n';
-                                    break;
-                                default:
-                                    printf("Opcion invalida.\n");
-                                }
-
-
-                                }while(seguir == 's');
-                            }
-                            else
-                            {
-                                printf("Ocurrio un error. Recargue la pagina..");
-                            }
+                            printf("Gracias por usar nuestro sitio web.");
+                            return 0;
                         }
-                    }
-                    else
-                    {
-                        printf("Tu nombre es %s y tenes %d anios.\n", nombre, edad);
-                        printf("Proceso terminado.\n");
+                        else
+                        {
+                            printf("Ocurrio un error. Recargue la pagina..");
+                        }
                     }
                 }
                 else
                 {
-                    printf("Tu nombre es %s.\n", nombre);
-                    printf("Proceso terminado.");
+                    printf("Tu nombre es %s y tenes %d anios.\n", nombre, edad);
+                    printf("Proceso terminado.\n");
                 }
             }
             else
             {
-                printf("Preceso cancelado.\n");
+                printf("Tu nombre es %s.\n", nombre);
+                printf("Proceso terminado.");
             }
-
-
         }
-        while(siguiente=='s');
+        else
+        {
+            printf("Preceso cancelado.\n");
+        }
+
+
     }
+    while(siguiente=='s');
+}
