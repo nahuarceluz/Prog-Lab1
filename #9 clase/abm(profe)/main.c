@@ -3,7 +3,7 @@
 #include <conio.h>
 #include <string.h>
 
-#define TAM 1
+#define TAM 10
 
 typedef struct
 {
@@ -36,38 +36,41 @@ int altaAlumno(eAlumno alumnos[], int tam);
 int bajaAlumno(eAlumno alumnos[], int tam);
 int modificarAlumno(eAlumno alumnos[], int tam);
 int menu();
+int altaAlumnoAuto(eAlumno alumnos[], int tam, int legajo); ///Le asigna legajo automaticamente.
+int hardcodearAlumnos(eAlumno alumnos[], int tam, int cantidad);
 
 int main()
 {
     eAlumno lista[TAM];
     char salir = 'n';
+    int legajo = 20000;
 
     inicializarAlumnos(lista, TAM);
+    legajo = legajo + hardcodearAlumnos(lista, TAM, 5); ///Si le cargamos 3, devuelve 3.
 
-    eAlumno x = { 1234, "Juan", 21, 'm', 2, 10, 6,{12, 5, 2018}, 0};
-    lista[0] = x;
     do
     {
         switch(menu())
         {
         case 1:
             // aca va el alta alumno
-            altaAlumno(lista, TAM);
+            //altaAlumno(lista, TAM);
+            if(altaAlumnoAuto(lista, TAM, legajo)) ///Si devuelve 1, entra al if y da el alta.
+            {
+                legajo++;
+            }
             break;
         case 2:
             bajaAlumno(lista, TAM);
             break;
         case 3:
             modificarAlumno(lista, TAM);
-            // aca va modificar alumno
             break;
         case 4:
             mostrarAlumnos(lista, TAM);
-            // aca va el alta alumno
             break;
         case 5:
             ordenarAlumnos(lista, TAM);
-            // aca va el alta alumno
             break;
         case 6:
             printf("Informes\n");
@@ -92,7 +95,7 @@ int main()
 
 void mostrarAlumno(eAlumno x)
 {
-    printf("  %d  %s  %d  %c  %d %d %.2f %02d/%02d/%d\n",
+    printf("%d %10s     %2d      %c    %2d     %2d     %.2f     %02d/%02d/%d\n",
            x.legajo,
            x.nombre,
            x.edad,
@@ -111,7 +114,7 @@ void mostrarAlumnos(eAlumno vec[], int tam)
     system("cls");
     printf("**** Listado de Alumnos ****\n\n");
 
-    printf(" Legajo Nombre Edad Sexo Nota1 Nota2 Promedio FIngreso\n");
+    printf("Legajo    Nombre   Edad    Sexo  Nota1  Nota2  Promedio  F.Ingreso\n");
     for(int i=0; i < tam; i++)
     {
         if( vec[i].isEmpty == 0)
@@ -132,8 +135,7 @@ void mostrarAlumnos(eAlumno vec[], int tam)
 
 void ordenarAlumnos(eAlumno vec[], int tam)
 {
-
-    eAlumno auxAlumno;
+eAlumno auxAlumno;
 
     for(int i= 0; i < tam-1 ; i++)
     {
@@ -147,6 +149,7 @@ void ordenarAlumnos(eAlumno vec[], int tam)
             }
         }
     }
+    printf("Alumnos ordenados por legajo\n\n");
 }
 
 int menu()
@@ -382,7 +385,7 @@ int modificarAlumno(eAlumno alumnos[], int tam)
         {
             printf("Ingrese nota 2: ");
             scanf("%d", &nota);
-             // falta validar nota
+            // falta validar nota
             alumnos[indice].nota2 = nota;
             alumnos[indice].promedio = (float) (alumnos[indice].nota1 + alumnos[indice].nota2)/2;
             printf("Se actualizo la nota");
@@ -398,6 +401,80 @@ int modificarAlumno(eAlumno alumnos[], int tam)
     }
     return todoOk;
 }
+int altaAlumnoAuto(eAlumno alumnos[], int tam, int legajo)
+{
+    int todoOk = 0;
+    int indice;
+    int edad;
+    int nota1;
+    int nota2;
+    char sexo;
+    char nombre[20];
+    eFecha fecha;
 
+    system("cls");
+    printf("**** Alta Alumno ****\n\n");
 
+    indice = buscarLibre(alumnos, tam);
+
+    if( indice == -1)
+    {
+        printf("Sistema Completo. No se pueden agregar mas alumnos\n");
+        system("pause");
+    }
+    else
+    {
+        printf("Ingrese nombre: ");
+        fflush(stdin);
+        gets( nombre );
+
+        printf("Ingrese edad:");
+        scanf("%d", &edad);
+
+        printf("Ingrese sexo:");
+        fflush(stdin);
+        scanf("%c", &sexo);
+
+        printf("Ingrese nota parcial 1:");
+        scanf("%d", &nota1);
+
+        printf("Ingrese nota parcial 2:");
+        scanf("%d", &nota2);
+
+        printf("Ingrese fecha ingreso: dd/mm/aaaa ");
+        scanf("%d/%d/%d", &fecha.dia, &fecha.mes, &fecha.anio);
+
+        alumnos[indice] = newAlumno(legajo, nombre, sexo, edad, nota1, nota2, fecha);
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int hardcodearAlumnos(eAlumno alumnos[], int tam, int cantidad)
+{
+    int contador = 0;
+
+    eAlumno listaAuxiliar[10] =
+    {
+        { 20000, "Juan", 21, 'm', 2, 10, 6,{12, 05, 2018}, 0},
+        { 20001, "Ana", 19, 'f', 7, 10, 6,{12, 07, 2019}, 0},
+        { 20002, "Alicia", 20, 'f', 1, 5, 6,{9, 12, 2018}, 0},
+        { 20003, "Miguel", 30, 'm', 2, 10, 6,{12, 02, 2020}, 0},
+        { 20004, "Gaston", 54, 'm', 2, 4, 6,{20, 05, 2018}, 0},
+        { 20005, "Amalia", 12, 'f', 5, 8, 6,{10, 12, 2006}, 0},
+        { 20006, "Juana",  05, 'f', 9, 7, 6,{04, 07, 2004}, 0},
+        { 20007, "Sofia", 30, 'f', 3, 4, 6,{12, 05, 2010}, 0},
+        { 20008, "Diego", 65, 'm', 10, 5, 6,{30, 05, 2017}, 0},
+        { 20009, "Fernando", 15, 'm', 5, 10, 6,{12, 5, 2014}, 0}
+    };
+
+    if(cantidad <= tam)
+    {
+        for(int i = 0; i<cantidad; i++)
+        {
+            alumnos[i] = listaAuxiliar[i];
+            contador++;
+        }
+    }
+}
 
