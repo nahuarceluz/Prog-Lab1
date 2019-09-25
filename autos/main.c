@@ -23,21 +23,25 @@ int main()
         {
         case 1:
             altaAuto(coche, TAM);
+            system("pause");
             break;
         case 2:
             bajaAuto(coche, TAM);
+            system("pause");
             break;
         case 3:
             mostrarAutos(coche, TAM);
+            system("pause");
             break;
         case 4:
             ordenarAutos(coche, TAM);
+            system("pause");
+            break;
             break;
         case 5:
+            salir = getchar();
             printf("Bye\n");
-            salir = 's';
         }
-        system("pause");
 
     }
     while(salir == 's');

@@ -29,17 +29,15 @@ void mostrarAutos(eAutos car[], int tam)
     printf("\nN.Serie         Marca       Modelo       Precio    Anio\n\n");
     for(int i=0; i < tam; i++)
     {
-        if(car[i].isEmpty == 0)
+        if(car[i].isEmpty = 0)
         {
             mostrarAuto(car[i]);
             flag = 1;
         }
     }
-
-    if(flag == 0)
+    if(flag = 1)
     {
-        system("cls");
-        printf("No hay autos que mostrar.\n");
+        printf("No hay autos para mostrar.\n");
     }
 }
 
