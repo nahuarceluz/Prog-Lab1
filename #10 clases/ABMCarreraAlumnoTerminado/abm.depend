@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1569247412 source:e:\#10 clase\abmcarreraalumnoterminado\alumno.c
+	"Alumno.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569247412 e:\#10 clase\abmcarreraalumnoterminado\alumno.h
+	"Carrera.h"
+
+1569247412 e:\#10 clase\abmcarreraalumnoterminado\carrera.h
+
+1569247412 source:e:\#10 clase\abmcarreraalumnoterminado\carrera.c
+	"Carrera.h"
+
