@@ -15,6 +15,7 @@ void mostrarAlumnosDeUnaCarrera(eAlumno alumnos[], int tam, eCarrera carreras[],
 void mostrarAlumnosCarrera(eAlumno alumnos[], int tam, eCarrera carreras[], int tamC, int idCarrera);
 void mostrarAlumnoXCarrera(eAlumno alumnos[], int tam, eCarrera carreras[], int tamC);
 void mostrarAlumnosPorCarrera(eAlumno alumnos[], int tam, eCarrera carreras[], int tamC);
+int mostrarCarreraConMasInscriptos(eAlumno alumnos[], int tam, eCarrera carreras[], int tamC, int idCarrera);
 
 int main()
 {
@@ -107,7 +108,7 @@ int menuInformes()
     printf("1- Mostrar Alumnos por una Carrera\n");
     printf("2- Mostrar Alumnos por Carrera\n");
     printf("3- Mostrar Cantidad de Alumnos por Carrera\n");
-    printf("4- Mostrar Mejor Promedio General\n");
+    printf("4- Mostrar la Carrera con mas Inscriptos\n");
     printf("5- Mostrar Mejor Promedio por Carrera\n");
     printf("6- Mostrar Alumnos Varones\n");
     printf("7- Mostrar Mujeres de Alguna Carrera\n");
@@ -132,14 +133,13 @@ void InformesAlumnos(eAlumno alumnos[], int tam, eCarrera carreras[], int tamC){
             printf("Informe 1\n");
             mostrarAlumnosDeUnaCarrera(alumnos, tam, carreras, tamC);
             break;
-
         case 2:
             printf("Informe 2\n");
             mostrarAlumnoXCarrera(alumnos, tam, carreras, tamC);
             break;
-
         case 3:
             printf("Informe 3\n");
+            mostrarAlumnosPorCarrera(alumnos, tam, carreras, tamC);
             break;
 
         case 4:
@@ -219,5 +219,34 @@ void mostrarAlumnoXCarrera(eAlumno alumnos[], int tam, eCarrera carreras[], int 
 
 void mostrarAlumnosPorCarrera(eAlumno alumnos[], int tam, eCarrera carreras[], int tamC)
 {
+    int contador = 0;
+    char desc;
+    system("cls");
+    printf("***Cantidad de Alumnos por Carrera***\n\n");
 
+    for(int i=0; i<tamC; i++)
+    {
+        cargarDescCarrera(carreras[i].id, carreras, tamC, desc);
+        printf("Carrera: %s\n", desc); //imprimo una carrera.
+
+        for(int j=0; j<tam; i++) //con este for busco los alumnos que estan en esa carrera.
+        {
+            if(alumnos[j].isEmpty == 0 && alumnos[j].idCarrera == carreras[i].id)
+            {
+                contador++;
+            }
+        }
+        printf("Cantidad: %d\n", contador);
+        contador = 0;
+    }
+}
+
+int mostrarCarreraConMasInscriptos(eAlumno alumnos[], int tam, int idCarrera)
+{
+    int cant = 0;
+
+    for(int i=0; i<tam; i++)
+    {
+
+    }
 }
