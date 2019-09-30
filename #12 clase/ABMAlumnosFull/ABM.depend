@@ -1,0 +1,184 @@
+# depslib dependency file v1.0
+1569279092 source:c:\users\alumno\desktop\abm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569285938 source:c:\users\alumno\desktop\abmalumnoautoincremental\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569286819 source:c:\users\alumno\desktop\abmalumnocarreras\alumno.c
+	"alumno.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569286799 c:\users\alumno\desktop\abmalumnocarreras\alumno.h
+	"carrera.h"
+
+1569286679 c:\users\alumno\desktop\abmalumnocarreras\carrera.h
+
+1569286850 source:c:\users\alumno\desktop\abmalumnocarreras\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+
+1569286874 source:c:\users\alumno\desktop\abmalumnocarreras\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+
+1569423345 source:c:\users\alumno\desktop\abmalumnocarreraslibrary\alumno.c
+	"alumno.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569286799 c:\users\alumno\desktop\abmalumnocarreraslibrary\alumno.h
+	"carrera.h"
+
+1569415919 c:\users\alumno\desktop\abmalumnocarreraslibrary\carrera.h
+
+1569286850 source:c:\users\alumno\desktop\abmalumnocarreraslibrary\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+
+1569424449 source:c:\users\alumno\desktop\abmalumnocarreraslibrary\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+
+1569858396 source:e:\#11 clase\abmalumnocarreraslibraryinformes (profe)\alumno.c
+	"alumno.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569286800 e:\#11 clase\abmalumnocarreraslibraryinformes (profe)\alumno.h
+	"carrera.h"
+
+1569415920 e:\#11 clase\abmalumnocarreraslibraryinformes (profe)\carrera.h
+
+1569286852 source:e:\#11 clase\abmalumnocarreraslibraryinformes (profe)\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+
+1569859578 source:e:\#11 clase\abmalumnocarreraslibraryinformes (profe)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+
+1569858396 source:e:\#11 clase\abmalumnosfull\alumno.c
+	"alumno.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569286800 e:\#11 clase\abmalumnosfull\alumno.h
+	"carrera.h"
+
+1569415920 e:\#11 clase\abmalumnosfull\carrera.h
+
+1569286852 source:e:\#11 clase\abmalumnosfull\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+
+1569859578 source:e:\#11 clase\abmalumnosfull\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+
+1569862912 source:c:\users\alumno\desktop\abmalumnosfull\alumno.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"alumno.h"
+	"carrera.h"
+
+1569286800 c:\users\alumno\desktop\abmalumnosfull\alumno.h
+	"carrera.h"
+
+1569862806 c:\users\alumno\desktop\abmalumnosfull\carrera.h
+
+1569862932 source:c:\users\alumno\desktop\abmalumnosfull\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+
+1569856865 source:c:\users\alumno\desktop\abmalumnosfull\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+	"comida.h"
+	"almuerzo.h"
+	"alumnos-carrera.h"
+
+1569856865 source:c:\users\alumno\desktop\abmalumnosfull\comida.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"comida.h"
+
+1569856661 c:\users\alumno\desktop\abmalumnosfull\comida.h
+
+1569856865 source:c:\users\alumno\desktop\abmalumnosfull\almuerzo.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"almuerzo.h"
+	"comida.h"
+	"alumno.h"
+
+1569855920 c:\users\alumno\desktop\abmalumnosfull\almuerzo.h
+	"alumno.h"
+	"comida.h"
+
+1569863428 c:\users\alumno\desktop\abmalumnosfull\alumnos-carrera.h
+
+1569862868 source:c:\users\alumno\desktop\abmalumnosfull\alumnos-carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+
