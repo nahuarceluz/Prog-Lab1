@@ -182,3 +182,66 @@
 	"carrera.h"
 	"alumno.h"
 
+1569856866 source:c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\almuerzo.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"almuerzo.h"
+	"comida.h"
+	"alumno.h"
+
+1569855922 c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\almuerzo.h
+	"alumno.h"
+	"comida.h"
+
+1569286800 c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\alumno.h
+	"carrera.h"
+
+1569862808 c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\carrera.h
+
+1569856662 c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\comida.h
+
+1569862914 source:c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\alumno.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"alumno.h"
+	"carrera.h"
+
+1569862870 source:c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\alumnos-carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+
+1569862934 source:c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+
+1569856866 source:c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\comida.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"comida.h"
+
+1569856866 source:c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+	"comida.h"
+	"almuerzo.h"
+	"alumnos-carrera.h"
+
+1569863430 c:\users\faby\desktop\nahu\prog - lab i\#12 clase\abmalumnosfull\alumnos-carrera.h
+
