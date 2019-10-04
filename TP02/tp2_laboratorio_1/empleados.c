@@ -3,81 +3,9 @@
 #include <string.h>
 #include <conio.h>
 
-#define TAM 5
+#include "empleados.h"
 
-typedef struct
-{
-    int id;
-    char nombre[51];
-    char apellido[51];
-    float salario;
-    int sector;
-    int isEmpty;
-} eEmpleado;
-
-int menu();
-int altaEmpleado(eEmpleado empleados[], int tam, int id);
-int buscarLibre(eEmpleado empleados[], int tam);
-eEmpleado newEmpleado(int id, char nombre[], char apellido[], float salario, int sector);
-void inicializarEmpleados(eEmpleado empleados[], int tam);
-void mostrarEmpleados(eEmpleado empleados[], int tam);
-void mostrarEmpleado(eEmpleado empleados);
-int buscarEmpleado(int id, eEmpleado empleados[], int tam);
-int bajaEmpleado(eEmpleado empleados[], int tam);
-int modificarEmpleado(eEmpleado empleados[], int tam);
-void ordenarEmpleados(eEmpleado empleados[], int tam);
-
-
-int main()
-{
-    int salir = 'n';
-    //eEmpleado lista[TAM];
-    int id = 100;
-    //inicializarEmpleados(lista, TAM);
-
-    eEmpleado lista[TAM] =
-    {
-        {100, "Juan", "Perez", 15.000, 5},
-        {101, "Roberto", "Gonzalez", 20.000, 4},
-        {102, "Eugenio", "Ortiz", 60.000, 3},
-        {103, "Ana", "Fernandez", 45.00, 2},
-        {104, "Lucrecia", "Lopez", 90.000, 1},
-    };
-
-    do
-    {
-        switch(menu())
-        {
-        case 1:
-            if(altaEmpleado(lista, TAM, id))
-            {
-                id++;
-            }
-            break;
-        case 2:
-            modificarEmpleado(lista, TAM);
-            break;
-        case 3:
-            bajaEmpleado(lista, TAM);
-            break;
-        case 4:
-            informarEmpleados(lista, TAM);
-            break;
-        case 5:
-            printf("5. Bye bye\n");
-            salir = getchar();
-            break;
-        default:
-            printf("Opcion invalida");
-            break;
-        }
-        system("pause");
-
-    }
-    while(salir == 'n');
-}
-
-int menu()
+int menuEmpleados()
 {
     int opcion;
 
@@ -136,7 +64,6 @@ int altaEmpleado(eEmpleado empleados[], int tam, int id)
     if( indice == -1)
     {
         printf("Lista llena, no se ha podido dar el alta de este empleado.\n");
-        system("pause");
     }
     else
     {
@@ -233,7 +160,6 @@ int bajaEmpleado(eEmpleado empleados[], int tam)
         {
             printf("\n\nSe ha cancelado la baja\n");
         }
-        system("pause");
     }
     return todoOk;
 }
@@ -348,6 +274,26 @@ int modificarEmpleado(eEmpleado empleados[], int tam)
 void ordenarEmpleados(eEmpleado empleados[], int tam)
 {
     eEmpleado aux;
+    int sector;
+
+
+    for(int i=0; i < tam-1; i++)
+    {
+        for(int j = i +1; j < tam; j++)
+        {
+            if(strcmp(empleados[i].apellido, empleados[j].apellido) > 0 && empleados[i].sector > empleados[j].sector)
+            {
+                aux = empleados[i];
+                empleados[i] = empleados[j];
+                empleados[j] = aux;
+            }
+        }
+    }
+}
+
+/*void ordenarEmpleados(eEmpleado empleados[], int tam)
+{
+    eEmpleado aux;
     eEmpleado auxA[100];
 
     for(int i= 0; i<tam-1; i++)
@@ -362,7 +308,7 @@ void ordenarEmpleados(eEmpleado empleados[], int tam)
             }
         }
     }
-}
+}*/
 
 int subMenu()
 {
@@ -393,10 +339,11 @@ void informarEmpleados(eEmpleado empleados[], int tam)
             printf("\nEmpleados ordenados: alfabeticamente - sector\n\n");
             ordenarEmpleados(empleados, tam);
             mostrarEmpleados(empleados, tam);
+            system("pause");
             break;
         case 2:
-            printf("Informe 2\n");
-
+            salarioPromedio(empleados, tam);
+            system("pause");
             break;
         case 3:
             printf("Confirma salir?:");
@@ -405,8 +352,27 @@ void informarEmpleados(eEmpleado empleados[], int tam)
             break;
         default:
             printf("\nOpcion Invalida!\n\n");
+            system("pause");
+            break;
         }
-        system("pause");
     }
     while(salir == 'n');
+}
+
+
+
+int salarioPromedio(eEmpleado empleados[], int tam)
+{
+    eEmpleado salary;
+    int acumulador = 0;
+    float promedio;
+
+    for(int i=0; i<tam; i++)
+    {
+        acumulador = acumulador + empleados[i].salario;
+    }
+
+    promedio = acumulador / tam;
+
+    printf("El total es %d y el promedio es %.2f\n", acumulador, promedio);
 }

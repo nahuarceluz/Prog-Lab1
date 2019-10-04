@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1569800943 source:c:\users\faby\desktop\nahu\prog - lab i\tp02\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<conio.h>
-
