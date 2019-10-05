@@ -3,16 +3,7 @@
 #include <stdlib.h>
 #include <conio.h>
 
-
-typedef struct
-{
-    int numeroDeSerie;
-    char marca[20];
-    char modelo[40];
-    int precio;
-    int anio;
-    int isEmpty;
-} eAutos;
+#include "autos.h"
 
 void mostrarAuto(eAutos car)
 {
@@ -26,35 +17,36 @@ void mostrarAutos(eAutos car[], int tam)
     system("cls");
     printf("**Listado de autos**\n\n");
 
-    printf("\nN.Serie         Marca       Modelo       Precio    Anio\n\n");
-    for(int i=0; i < tam; i++)
+    printf("N.Serie         Marca       Modelo       Precio    Anio\n");
+    for(int i=0; i<tam; i++)
     {
-        if(car[i].isEmpty = 0)
+        if(car[i].isEmpty == 0)
         {
             mostrarAuto(car[i]);
             flag = 1;
         }
     }
-    if(flag = 1)
+
+    if(flag == 0)
     {
-        printf("No hay autos para mostrar.\n");
+        system("cls");
+        printf("\n---No hay alumnos que mostrar---\n");
     }
 }
 
-void ordenarAutos(eAutos vec[], int tam)
+void ordenarAutos(eAutos car[], int tam)
 {
-
     eAutos auxCar;
 
-    for(int i= 0; i < tam-1 ; i++)
+    for(int i= 0; i<tam-1 ; i++)
     {
-        for(int j= i+1; j <tam; j++)
+        for(int j= i+1; j<tam; j++)
         {
-            if( vec[i].numeroDeSerie > vec[j].numeroDeSerie)
+            if(car[i].numeroDeSerie > car[j].numeroDeSerie)
             {
-                auxCar = vec[i];
-                vec[i] = vec[j];
-                vec[j] = auxCar;
+                auxCar = car[i];
+                car[i] = car[j];
+                car[j] = auxCar;
             }
         }
     }
@@ -82,7 +74,7 @@ void inicializarAuto(eAutos autos[], int tam)
 
     for(int i=0; i < tam; i++)
     {
-        autos[i].isEmpty = 1;
+       autos[i].isEmpty = 1;
     }
 }
 
@@ -126,13 +118,13 @@ eAutos newAuto(int numeroDeSerie, char marca[], char modelo[], int precio, int a
     strcpy(nuevoAuto.modelo, modelo);
     nuevoAuto.precio = precio;
     nuevoAuto.anio = anio;
+    nuevoAuto.isEmpty = 0;
 
     return nuevoAuto;
 }
 
 int altaAuto(eAutos autos[], int tam)
 {
-
     int numeroDeSerie;
     char marca[20];
     char modelo[40];
@@ -153,8 +145,8 @@ int altaAuto(eAutos autos[], int tam)
     }
     else
     {
-        printf("\nIngrese Numero de Serie: ");
-        scanf("%d", &numeroDeSerie );
+        printf("Ingrese Numero de Serie: ");
+        scanf("%d", &numeroDeSerie);
 
         esta = buscarAuto(numeroDeSerie, autos, tam);
 

@@ -5,12 +5,13 @@ typedef struct
     char modelo[40];
     int precio;
     int anio;
+    int isEmpty;
 } eAutos;
 
 void mostrarAuto(eAutos x);
 void mostrarAutos(eAutos vec[], int tam);
 void ordenarAutos(eAutos vec[], int tam);
-void inicializarAlumnos(eAutos alumnos[], int tam);
+void inicializarAuto(eAutos autos[], int tam);
 int buscarLibre(eAutos alumnos[], int tam);
 int buscarAuto(int numeroDeSerie, eAutos alumnos[], int tam);
 eAutos newAuto(int numeroDeSerie, char marca[], char modelo[], int precio, int anio);
