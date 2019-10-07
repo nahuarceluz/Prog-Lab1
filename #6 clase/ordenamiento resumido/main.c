@@ -39,6 +39,8 @@ void mostrarVectorInt(int vec[], int tam)
     printf("\n\n");
 }
 
+
+
 void ordenarVectorInt(int vec[], int tam, int criterio)
 {
 
@@ -48,13 +50,13 @@ void ordenarVectorInt(int vec[], int tam, int criterio)
     {
         for(int j = i + 1; j < TAM; j++)
         {
-                if( vec[j] < vec[i] && !criterio )
+                if(vec[j] < vec[i] && !criterio )
                 {
                     aux = vec[j];
                     vec[j] = vec[i];
                     vec[i] = aux;
                 }
-                 else if( vec[j] > vec[i] && criterio )
+                 else if(vec[j] > vec[i] && criterio )
                 {
                     aux = vec[j];
                     vec[j] = vec[i];
