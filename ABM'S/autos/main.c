@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "autos.h"
 
-#define TAM 2
+#define TAM 1
 #define TAMC 2
 
 int main()
@@ -10,7 +10,7 @@ int main()
     eColor color[TAMC] = {{1, "Rojo"}, {2, "Azul"}, {3, "Verde"}};
     eAutos coche [TAM];
 
-    hardcodearAutos(coche, TAM, 2);
+    hardcodearAutos(coche, TAM, 1);
 
     //inicializarAuto(coche, TAM);
 

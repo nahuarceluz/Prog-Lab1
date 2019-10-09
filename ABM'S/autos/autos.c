@@ -115,7 +115,7 @@ int buscarAuto(int numeroDeSerie, eAutos autos[], int tam)
     return indice;
 }
 
-eAutos newAuto(int numeroDeSerie, char marca[], char modelo[], int precio, int anio)
+eAutos newAuto(int numeroDeSerie, char marca[], char modelo[], int precio, int anio, int id)
 {
     eAutos nuevoAuto;
     nuevoAuto.numeroDeSerie = numeroDeSerie;
@@ -123,6 +123,7 @@ eAutos newAuto(int numeroDeSerie, char marca[], char modelo[], int precio, int a
     strcpy(nuevoAuto.modelo, modelo);
     nuevoAuto.precio = precio;
     nuevoAuto.anio = anio;
+    nuevoAuto.idColor = id;
     nuevoAuto.isEmpty = 0;
 
     return nuevoAuto;
@@ -135,6 +136,7 @@ int altaAuto(eAutos autos[], int tam, eColor colores[], int tamC)
     char modelo[40];
     int precio;
     int anio;
+    int id;
     int esta;
     int indice;
     int todoOk = 0;
@@ -178,7 +180,12 @@ int altaAuto(eAutos autos[], int tam, eColor colores[], int tamC)
             printf("Ingrese anio: ");
             scanf("%d", &anio);
 
-            autos[indice] = newAuto(numeroDeSerie, marca, modelo, precio, anio);
+            mostrarColores(colores, tamC);
+            printf("\nIngrese color a elegir: ");
+            scanf("%d", &id);
+            printf("Alta exitosa!!\n");
+
+            autos[indice] = newAuto(numeroDeSerie, marca, modelo, precio, anio, id);
             todoOk = 1;
         }
     }
@@ -196,7 +203,7 @@ int bajaAuto(eAutos autos[], int tam, eColor colores[], int tamC)
     system("cls");
     printf("**** Baja Alumno ****\n\n");
 
-    printf("Ingrese legajo: ");
+    printf("Ingrese numero de serio: ");
     scanf("%d", &numeroDeSerie);
 
     indice = buscarAuto(numeroDeSerie, autos, tam);
@@ -208,21 +215,23 @@ int bajaAuto(eAutos autos[], int tam, eColor colores[], int tamC)
     }
     else
     {
+        printf("N.Serie         Marca       Modelo       Precio    Anio     Color\n");
         mostrarAuto(autos[indice], colores, tamC);
+        printf("------------------------------------------------------------------------\n");
         printf("\nConfirma eliminacion?: ");
         fflush(stdin);
         confirma = getchar();
         if( confirma == 's')
         {
             autos[indice].isEmpty = 1;
-            printf("\n\nSe ha eliminado el alumno\n");
+            printf("\n\nSe ha eliminado el auto de nuestros registros\n");
             todoOk = 1;
         }
         else
         {
             printf("\n\nSe ha cancelado la baja\n");
         }
-        system("pause");
+
     }
     return todoOk;
 }
@@ -246,20 +255,19 @@ int modificarAuto(eAutos autos[], int tam, eColor colores[], int tamC)
     system("cls");
     printf("**** Modificar Auto ****\n\n");
 
-    printf("Ingrese legajo: ");
+    printf("Ingrese id de serie: ");
     scanf("%d", &numeroDeSerie);
 
     indice = buscarAuto(numeroDeSerie, autos, tam);
 
     if( indice == -1 )
     {
-        printf("\nNo tenemos registrado ese legajo\n");
-        system("pause");
+        printf("\nNo tenemos registrado ese auto\n");
     }
     else
     {
-        printf("N.Serie         Marca       Modelo       Precio    Anio\n");
-        printf("-------------------------------------------------------------\n");
+        printf("N.Serie         Marca       Modelo       Precio    Anio     Color\n");
+        printf("------------------------------------------------------------------------\n");
         mostrarAuto(autos[indice], colores, tamC);
         system("pause");
 
@@ -376,4 +384,18 @@ int hardcodearAutos(eAutos autos[], int tam, int cantidad)
     }
 
     return cont;
+}
+
+void mostrarColor(eColor colores)
+{
+    printf(" %d  %10s\n", colores.id, colores.color);
+}
+
+void mostrarColores(eColor colores[], int tam)
+{
+    printf("\nId     Descripcion\n");
+    printf("---------------------\n");
+    for(int i=0; i < tam; i++){
+        mostrarColor(colores[i]);
+    }
 }

@@ -21,7 +21,7 @@ void mostrarAutos(eAutos car[], int tam, eColor colores[], int tamC);
 void inicializarAuto(eAutos autos[], int tam);
 int buscarLibre(eAutos alumnos[], int tam);
 int buscarAuto(int numeroDeSerie, eAutos alumnos[], int tam);
-eAutos newAuto(int numeroDeSerie, char marca[], char modelo[], int precio, int anio);
+eAutos newAuto(int numeroDeSerie, char marca[], char modelo[], int precio, int anio, int id);
 int altaAuto(eAutos autos[], int tam, eColor colores[], int tamC);
 int bajaAuto(eAutos autos[], int tam, eColor colores[], int tamC);
 int modificarAuto(eAutos autos[], int tam, eColor colores[], int tamC);
