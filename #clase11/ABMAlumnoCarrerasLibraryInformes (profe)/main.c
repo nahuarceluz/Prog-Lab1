@@ -307,7 +307,8 @@ void carreraMasCursada(eAlumno alumnos[], int tam, eCarrera carreras[], int tamC
     }
 }
 
-void mejoresPromediosXCarrera(eAlumno alumnos[], int tam, eCarrera carreras[], int tamC){
+void mejoresPromediosXCarrera(eAlumno alumnos[], int tam, eCarrera carreras[], int tamC)
+{
 
     char desc[20];
     float mayor;

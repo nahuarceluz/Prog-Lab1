@@ -65,3 +65,30 @@
 	"carrera.h"
 	"alumno.h"
 
+1570565870 source:c:\users\faby\desktop\nahu\prog - lab i\#11 clase\abmalumnocarreraslibraryinformes (profe)\alumno.c
+	"alumno.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569286800 c:\users\faby\desktop\nahu\prog - lab i\#11 clase\abmalumnocarreraslibraryinformes (profe)\alumno.h
+	"carrera.h"
+
+1569415920 c:\users\faby\desktop\nahu\prog - lab i\#11 clase\abmalumnocarreraslibraryinformes (profe)\carrera.h
+
+1570566841 source:c:\users\faby\desktop\nahu\prog - lab i\#11 clase\abmalumnocarreraslibraryinformes (profe)\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+
+1570565588 source:c:\users\faby\desktop\nahu\prog - lab i\#11 clase\abmalumnocarreraslibraryinformes (profe)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+

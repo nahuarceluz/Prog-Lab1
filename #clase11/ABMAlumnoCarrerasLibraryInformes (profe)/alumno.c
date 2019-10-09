@@ -283,7 +283,7 @@ int ModificarAlumno(eAlumno vec[], int tam, eCarrera carreras[], int tamC)
 }
 
 
-int hardcodearAlumnos( eAlumno vec[], int tam, int cantidad)
+int hardcodearAlumnos(eAlumno vec[], int tam, int cantidad)
 {
     int cont = 0;
 
@@ -306,7 +306,6 @@ int hardcodearAlumnos( eAlumno vec[], int tam, int cantidad)
     {
         for(int i=0; i < cantidad; i++)
         {
-
             vec[i] = suplentes[i];
             cont++;
         }
