@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1570568576 source:c:\users\faby\desktop\nahu\prog - lab i\juegos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1570568995 source:c:\users\faby\desktop\juegos 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1570570653 source:c:\users\faby\desktop\nahu\prog - lab i\juegos 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1570570653 source:c:\users\faby\desktop\nahu\prog - lab i\abm's\juegos 2 (ejuegos)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

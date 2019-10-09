@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1570464842 source:d:\nueva carpeta\pp_nahuel_arceluz_1a\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1570464844 source:e:\pp_nahuel_arceluz_1a\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
