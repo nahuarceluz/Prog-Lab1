@@ -1,0 +1,184 @@
+# depslib dependency file v1.0
+1570629516 source:c:\users\alumno\desktop\pp_nahuel_arceluz_1a\funciones.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	"funciones.h"
+
+1570630264 source:c:\users\alumno\desktop\pp_nahuel_arceluz_1a\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1570622958 c:\users\alumno\desktop\pp_nahuel_arceluz_1a\funciones.h
+	"funciones.h"
+
+1570630382 source:e:\pp_nahuel_arceluz_1a\funciones.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	"funciones.h"
+
+1570622960 e:\pp_nahuel_arceluz_1a\funciones.h
+	"funciones.h"
+
+1570630266 source:e:\pp_nahuel_arceluz_1a\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1570836173 source:c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a\funciones.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	"funciones.h"
+
+1570622960 c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a\funciones.h
+	"funciones.h"
+
+1570836275 source:c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1571104916 source:c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\funciones.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	"funciones.h"
+
+1571096672 c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\funciones.h
+
+1571158104 source:c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"color.h"
+	"marca.h"
+	"servicio.h"
+	"trabajo.h"
+	"auto.h"
+
+1571154490 source:c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\funciones.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
+	"funciones.h"
+
+1571154580 c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\funciones.h
+
+1571157198 source:c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"color.h"
+	"marca.h"
+	"servicio.h"
+	"trabajo.h"
+	"auto.h"
+
+1571152802 source:c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\color.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"color.h"
+
+1571152802 c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\color.h
+
+1571157164 source:c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\auto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"color.h"
+	"marca.h"
+	"servicio.h"
+	"auto.h"
+
+1571153160 c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\marca.h
+
+1571153573 c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\servicio.h
+
+1571154561 c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\auto.h
+
+1571157240 c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\trabajo.h
+	"color.h"
+	"marca.h"
+	"servicio.h"
+	"auto.h"
+
+1571153160 source:c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\marca.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"marca.h"
+
+1571153573 source:c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\servicio.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"servicio.h"
+
+1571157600 source:c:\users\faby\desktop\pp_nahuel_arceluz_1a (practico)\trabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"color.h"
+	"marca.h"
+	"servicio.h"
+	"trabajo.h"
+	"auto.h"
+
+1571157164 source:c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\auto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"color.h"
+	"marca.h"
+	"servicio.h"
+	"auto.h"
+
+1571152802 c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\color.h
+
+1571153160 c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\marca.h
+
+1571153573 c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\servicio.h
+
+1571154561 c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\auto.h
+
+1571152802 source:c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\color.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"color.h"
+
+1571157240 c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\trabajo.h
+	"color.h"
+	"marca.h"
+	"servicio.h"
+	"auto.h"
+
+1571153160 source:c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\marca.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"marca.h"
+
+1571153573 source:c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\servicio.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"servicio.h"
+
+1571157600 source:c:\users\faby\desktop\nahu\prog - lab i\tps y parciales\pp_nahuel_arceluz_1a (practico)\trabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"color.h"
+	"marca.h"
+	"servicio.h"
+	"trabajo.h"
+	"auto.h"
+
