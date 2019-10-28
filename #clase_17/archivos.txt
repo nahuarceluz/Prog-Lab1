@@ -1,0 +1,33 @@
+Archivos:
+
+FILE* = fopen(path, modo);
+
+path: archivo.txt
+
+modo: w - escritura (cursor al inicio)
+wb - escritura binaria (cursor al inicio)
+a - escritura (cursor al final)
+ab escritura binaria (cursor al final)
+r - leer
+rb - leer en binario
+
+
+'eof' --> significa que llegó al final del archivo.
+si el archivo no existe, lo crea.
+si existe y se abre en modo w, se destruye.
+si tengo un archivo escrito, modo a para que no se destruya
+si abro un archivo vacio, y esta en modo r me devuelve NULL
+una vez que no usamos mas el archivo, lo cerramos: fclose(puntero a FILE)
+
+Funciones: 
+
+-fprinf()
+-fread(destino, sizeof, cantidad, f) --> escribir (de archivo a memoria)
+-fwrite(origen -puntero, lo que quiero escribir-, sizeof, cantidad, f -donde lo quiero escribir-) --> leer (de memoria a archivo)
+-fgets(puntero, cantidad, f)
+-fgetc()
+
+-feof(f) --> devuelve 1 o 0
+
+
+www.mockaroo.com

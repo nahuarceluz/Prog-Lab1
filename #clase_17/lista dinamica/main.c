@@ -31,6 +31,7 @@ int main()
     int auxInt;
     float auxFloat;
     char auxCad[100];
+    int cantidad;
     if(lista == NULL)
     {
         printf("No se pudo asignar memoria.\n");
@@ -38,7 +39,7 @@ int main()
         exit(EXIT_FAILURE);
     }
 
-    printf("Ingrese id: ");
+    /*printf("Ingrese id: ");
     scanf("%d", &auxInt);
 
     printf("Ingrese nombre: ");
@@ -48,7 +49,8 @@ int main()
     printf("Ingrese sueldo: ");
     scanf("%f", &auxFloat);
 
-    auxEmpleado = newEmpleadoParam(auxInt, auxCad, auxFloat);
+    //auxEmpleado = newEmpleadoParam(auxInt, auxCad, auxFloat);
+    auxEmpleado = newEmpleadoParam(1234, "Jose", 24500);
     if(auxEmpleado == NULL)
     {
         printf("No se pudo crear al empleado.\n");
@@ -67,8 +69,26 @@ int main()
     }
     system("pause");
 
-    mostrarEmpleados(lista, tam);
+    mostrarEmpleados(lista, tam);*/
 
+    char buffer[3][30];
+
+    FILE* f = fopen("Empleados.csv", "r");
+    if(f == NULL)
+    {
+        exit(1);
+    }
+
+    fscanf(f, "%[^,], %[^,], %[^\n]\n", buffer[0], buffer[1], buffer[2]); ///[^,] = lee todo hasta que encuentres una coma, y la saltees.
+
+    while (!feof(f))
+    {
+        cantidad = fscanf(f, "%[^,], %[^,], %[^\n]\n", buffer[0], buffer[1], buffer[2]);
+        if(cantidad == 3) ///Si no hago eso quiere leer mas alla del 3.
+        {
+            auxEmpleado = newEmpleadoParam(atoi(buffer[0], buffer[1], buffer[2]));
+        }
+    }
 
     return 0;
 }
