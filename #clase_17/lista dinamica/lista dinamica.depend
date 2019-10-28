@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572280016 source:c:\users\alumno\desktop\lista dinamica\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
