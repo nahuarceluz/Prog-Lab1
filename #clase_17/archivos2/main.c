@@ -6,69 +6,69 @@ typedef struct
     int id;
     char nombre[20];
     float sueldo;
-
 } eEmpleado;
 
-int mostrarEmpleados(eEmpleado** empleado, int tam);
-eEmpleado** agrandarLista(eEmpleado* empleado, int tam);
+int mostrarEmpleado( eEmpleado* e);
 
 int main()
 {
-    eEmpleado unEmpleado = {123, "Julia", 34567};
-    int cantidad;
+    int cant;
+    eEmpleado unEmpleado = {1234, "Julia", 34500};
 
     mostrarEmpleado(&unEmpleado);
 
     /*FILE* f = fopen("data.bin", "wb");
-    if(f == NULL)
-    {
+    if( f == NULL){
         exit(1);
     }
 
-    cantidad = fwrite(&unEmpleado, sizeof(eEmpleado), 1, f);
-    if(cantidad < 1)
-    {
-        printf("\nHubo un problema para guardar este archivo.\n");
+    cant = fwrite(&unEmpleado, sizeof(eEmpleado), 1, f);
+    if( cant < 1){
+        printf("Problemas para guardar en el archivo");
     }
-    else
-    {
-        printf("\nArchivo guardado correctamente");
+    else{
+        printf("Se guardo de manera exitosa\n");
     }
-    fclose(f);*/
-
-    ///Lectura
-
-    eEmpleado otroEmpleado;
+    fclose(f);
+*/
+    eEmpleado clonEmpleado;
 
     FILE* f = fopen("data.bin", "rb");
-    if(f == NULL)
-    {
+    if( f == NULL){
         exit(1);
     }
 
-    cantidad = fread(&otroEmpleado, sizeof(eEmpleado), 1, f);
+    cant = fread(&clonEmpleado, sizeof(eEmpleado), 1, f);
 
-    if(cantidad == 1)
-    {
-        printf("\nArchivo leido correctamente\n");
+    if( cant == 1){
+
+        printf("Archivo leido correctamente\n");
     }
-    else
-    {
-        printf("\nError.. No se pudo leer el archivo\n");
+    else{
+        printf("Problemas para leer el archivo\n");
     }
-    mostrarEmpleado(&otroEmpleado);
+
+    mostrarEmpleado(&clonEmpleado);
+
+
+
+
+
+    return 0;
 }
 
-int mostrarEmpleado(eEmpleado* empleado) ///
+
+int mostrarEmpleado( eEmpleado* e)
 {
     int todoOk = 0;
 
-    if(empleado != NULL)
+    if( e != NULL)
     {
-        printf("%d  %10s %.2f", empleado->id, empleado->nombre, empleado->sueldo);
+
+        printf("%d %s %.2f\n", e->id, e->nombre, e->sueldo);
         todoOk = 1;
     }
 
     return todoOk;
-}
 
+}
