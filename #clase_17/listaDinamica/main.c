@@ -94,7 +94,7 @@ int main()
         printf("No se pudieron serializar los empleados\n");
     }
 
-    //--------------Leo desde binario------------------
+    ///--------------Leo desde binario------------------
     eEmpleado** lista2 = (eEmpleado**) malloc( sizeof(eEmpleado*));
     if( lista2 == NULL)
     {
@@ -143,9 +143,9 @@ int main()
     fclose(f);
 
 
-///-------------------------Crear un archivo CSV de empleados
+///-----------------Crear un archivo CSV de empleados----------------------
 
-    if(guardarEmpleadosBinario(lista2, tam2, "lista2"))
+    if(guardarEmpleadosBinario(lista2, tam2, "empleados2"))
     {
         printf("Se guardaron los empleados correctamente\n");
     }
@@ -346,7 +346,7 @@ int guardarEmpleadosCVS(eEmpleado** lista, int tam, char* path)
             return todoOk;
         }
 
-        fprintf(f, "id,nombre,sueldo\n");
+        fprintf(f, "id,nombre,sueldo\n", path);
         for(int i=0; i < tam; i++)
         {
             auxEmpleado = *(lista + i);
