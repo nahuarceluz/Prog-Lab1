@@ -23,7 +23,7 @@ Funciones:
 
 -fprinf()
 -fread(destino, sizeof, cantidad, f) --> escribir (de archivo a memoria)
--fwrite(origen -puntero, lo que quiero escribir-, sizeof, cantidad, f -donde lo quiero escribir-) --> leer (de memoria a archivo)
+-fwrite(origen -puntero-, sizeof, cantidad, f -donde lo quiero guardar-) --> leer (de memoria a archivo)
 -fgets(puntero, cantidad, f)
 -fgetc()
 
