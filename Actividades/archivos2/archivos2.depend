@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572373843 source:c:\users\faby\desktop\nahu\prog - lab i\archivos2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
