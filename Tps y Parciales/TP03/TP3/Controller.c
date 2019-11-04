@@ -35,12 +35,12 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_addEmployee(LinkedList** pArrayListEmployee)
+int controller_addEmployee(LinkedList** pArrayListEmployee, int tam)
 {
     int indice;
     int todoOk = 0;
-    int tam = 0;
-    Employee* empleados;
+
+    Employee* nuevoEmpleado;
 
     int id;
     char* nombre[128];
@@ -50,7 +50,7 @@ int controller_addEmployee(LinkedList** pArrayListEmployee)
     system("cls");
     printf("****Alta Empleado****\n\n");
 
-    indice = buscarLibre(pArrayListEmployee, tam);
+    indice = ll_len(pArrayListEmployee);
 
     if( indice == -1)
     {
@@ -60,20 +60,23 @@ int controller_addEmployee(LinkedList** pArrayListEmployee)
     {
         printf("Ingrese Id: ");
         scanf("%d", &id);
+        employee_setId(nuevoEmpleado, id);
 
         printf("Ingrese nombre: ");
         fflush(stdin);
         gets(nombre);
+        employee_setNombre(nuevoEmpleado, nombre);
 
         printf("Ingrese horas de trabajo: ");
         scanf("%d", &horasTrabajadas);
-
+        employee_setHorasTrabajadas(nuevoEmpleado, horasTrabajadas);
         printf("Ingrese sueldo: ");
         scanf("%d", &sueldo);
+        employee_setSueldo(nuevoEmpleado, sueldo);
 
-        pArrayListEmployee[indice] = employee_newParametros(id, nombre, horasTrabajadas, sueldo);
+        ll_add(pArrayListEmployee, nuevoEmpleado);
         todoOk = 1;
-        printf("Alta completa!\n");
+        printf("El empleado se dio de alta correctamente!\n");
     }
     return todoOk;
 }
@@ -115,7 +118,7 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee, int tam)
     if(pArrayListEmployee != NULL)
     {
 
-        printf("Id        Nombre      H.Trabajadas      Sueldo\n\n");
+        printf("Id        Nombre      Horas      Sueldo\n\n");
         for(int i=0; i < tam; i++)
         {
             mostrarEmpleado(pArrayListEmployee + i);

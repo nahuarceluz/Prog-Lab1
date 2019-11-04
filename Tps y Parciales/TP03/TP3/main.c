@@ -44,15 +44,13 @@ int main()
         system("pause");
     }while(option != 10);*/
 
+    /*controller_addEmployee(listaEmpleados, tam);
+    controller_ListEmployee(listaEmpleados, tam);*/
+
 
     Employee* lista = (Employee*) malloc(sizeof(Employee));
-
     Employee* pEmpleado = employee_newParametros(123, "Manuel", 500, 60000);
-    Employee* pEmpleado2 = employee_newParametros(100, "Javier", 600, 10500);
-
     lista = agregarEmpleado(lista, &tam, pEmpleado);
-    lista = agregarEmpleado(lista, &tam, pEmpleado2);
-
     controller_ListEmployee(lista, tam);
 
     return 0;

@@ -30,18 +30,17 @@ int menuEmployee()
 
 Employee* employee_new()
 {
-    Employee* p = (Employee*) malloc(sizeof(Employee));
+    Employee* empleado = (Employee*) malloc(sizeof(Employee));
 
-    if(p != NULL)
+    if(empleado != NULL)
     {
-        p->id = 0;
-        strcpy(p->nombre, " ");
-        p->horasTrabajadas = 0;
-        p->sueldo = 0;
-        p->isEmpty = 0;
+        empleado->id = 0;
+        strcpy(empleado->nombre, " ");
+        empleado->horasTrabajadas = 0;
+        empleado->sueldo = 0;
     }
 
-    return p;
+    return empleado;
 }
 
 int mostrarEmpleado(Employee* emp)
@@ -50,7 +49,7 @@ int mostrarEmpleado(Employee* emp)
 
     if(emp != NULL)
     {
-        printf("%d   %10s          %d            %d\n", emp->id, emp->nombre, emp->horasTrabajadas, emp->sueldo);
+        printf("%d   %10s       %d        %d\n", emp->id, emp->nombre, emp->horasTrabajadas, emp->sueldo);
         todoOk = 1;
     }
 
@@ -138,19 +137,4 @@ int employee_setHorasTrabajadas(Employee* empleado, int horasTrabajadas)
         todoOk = 1;
     }
     return todoOk;
-}
-
-int buscarLibre(Employee* empleados, int tam)
-{
-    int indice = -1;
-
-    for(int i=0; i < tam; i++)
-    {
-        if(empleados[i].isEmpty == 1)
-        {
-            indice = i;
-            break;
-        }
-    }
-    return indice;
 }
