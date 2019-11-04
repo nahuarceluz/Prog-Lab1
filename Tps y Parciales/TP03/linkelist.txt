@@ -1,0 +1,21 @@
+LinkedList* ll_newLinkedList(void); //constructor de una nueva lista.
+
+int ll_len(LinkedList* this); //dice la cant de elementos.
+
+int ll_add(LinkedList* this, void* pElement); //
+
+void* ll_get(LinkedList* this, int index);
+
+int ll_set(LinkedList* this, int index,void* pElement);
+int ll_remove(LinkedList* this,int index);
+int ll_clear(LinkedList* this); //vacia la lista
+int ll_deleteLinkedList(LinkedList* this); //borra la lista
+int ll_indexOf(LinkedList* this, void* pElement); //busca un puntero
+int ll_isEmpty(LinkedList* this); //pregunta si esta vacio o no
+int ll_push(LinkedList* this, int index, void* pElement);
+void* ll_pop(LinkedList* this,int index);
+int ll_contains(LinkedList* this, void* pElement);
+int ll_containsAll(LinkedList* this,LinkedList* this2);
+LinkedList* ll_subList(LinkedList* this,int from,int to);
+LinkedList* ll_clone(LinkedList* this);
+int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);

@@ -7,6 +7,7 @@ typedef struct
     int id;
     char nombre[20];
     float sueldo;
+
 } eEmpleado;
 
 eEmpleado* newEmpleado();
@@ -175,8 +176,8 @@ eEmpleado* newEmpleadoParam( int id, char* nombre, float sueldo)
     if( nuevo != NULL)
     {
         if(setIdEmpleado(nuevo, id) &&
-                setNombreEmpleado(nuevo, nombre)&&
-                setSueldoEmpleado(nuevo, sueldo))
+           setNombreEmpleado(nuevo, nombre)&&
+           setSueldoEmpleado(nuevo, sueldo))
         {
             // printf("Empleado creado correctamente\n");
         }
@@ -258,11 +259,11 @@ int getNombreEmpleado(eEmpleado* e, char* nombre)
     return todoOk;
 }
 
-int mostrarEmpleado( eEmpleado* e)
+int mostrarEmpleado(eEmpleado* e)
 {
     int todoOk = 0;
 
-    if( e != NULL)
+    if(e != NULL)
     {
 
         printf("%d %s %.2f\n", e->id, e->nombre, e->sueldo);
@@ -273,7 +274,7 @@ int mostrarEmpleado( eEmpleado* e)
 
 }
 
-int mostrarEmpleados( eEmpleado** e, int tam)
+int mostrarEmpleados(eEmpleado** e, int tam)
 {
     int todoOk = 0;
 
@@ -294,7 +295,7 @@ int mostrarEmpleados( eEmpleado** e, int tam)
 
 eEmpleado** agrandarLista(eEmpleado** vec, int tam)
 {
-    eEmpleado** aux = (eEmpleado**) realloc(vec, sizeof(eEmpleado*) * tam);
+    eEmpleado** aux = (eEmpleado**) realloc(vec, sizeof(eEmpleado*) *tam);
     if( aux != NULL)
     {
         vec = aux;

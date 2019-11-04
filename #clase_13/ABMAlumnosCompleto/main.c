@@ -42,9 +42,9 @@ int main()
     inicializarAlumnos( lista, TAM);
     inicializarAlmuerzos( almuerzos, TAMAL);
 
-    legajo = legajo + hardcodearAlumnos(lista, TAM, 9);
+    //legajo = legajo + hardcodearAlumnos(lista, TAM, 9);
 
-    idAlmuerzo = idAlmuerzo + hardcodearAlmuerzos(almuerzos, TAMAL, 10);
+    //idAlmuerzo = idAlmuerzo + hardcodearAlmuerzos(almuerzos, TAMAL, 10);
 
     do
     {

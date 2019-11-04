@@ -59,7 +59,7 @@ int cargarEmpleado(eEmpleado* e, int legajo, char* nombre, char sexo, float suel
     e->legajo = legajo;
     strcpy(e->nombre, nombre);
     e->sexo = sexo;
-    e ->sueldo = sueldo;
+    e->sueldo = sueldo;
     e->fIngreso = fecha;
     todoOk = 1;
 
@@ -92,9 +92,9 @@ eEmpleado* newEmpleado()
 
 int mostrarEmpleado(eEmpleado* emp)
 {
-    int todoOk =0;
+    int todoOk = 0;
 
-    if( emp != NULL)
+    if(emp != NULL)
     {
         printf(" %d  %s  %c  %.2f  %02d/%02d/%d\n", emp->legajo, emp->nombre, emp->sexo, emp->sueldo, emp->fIngreso.dia, emp->fIngreso.mes, emp->fIngreso.anio);
         todoOk = 1;
@@ -129,13 +129,13 @@ eEmpleado* agregarEmpleado(eEmpleado* vec, int* tam, eEmpleado* emp)
 {
     eEmpleado* aux;
 
-    if( vec != NULL && tam != NULL && emp != NULL)
+    if(vec != NULL && tam != NULL && emp != NULL)
     {
         *(vec + *tam) = *emp;
 
-        aux = realloc( vec, (*tam +2) *  sizeof(eEmpleado) );
+        aux = realloc(vec, (*tam +2) * sizeof(eEmpleado));
 
-        if( aux != NULL)
+        if(aux != NULL)
         {
             vec = aux;
             (*tam)++;
@@ -150,12 +150,12 @@ int mostrarEmpleados(eEmpleado* vec, int tam)
 {
     int todoOk = 0;
 
-    if( vec != NULL)
+    if(vec != NULL)
     {
 
         for(int i=0; i < tam; i++)
         {
-            mostrarEmpleado(vec +i);
+            mostrarEmpleado(vec + i);
         }
         todoOk = 1;
     }

@@ -174,3 +174,44 @@
 1569850100 source:c:\users\alumno\desktop\abmalumnosfullfull\almuerzo.c
 	"almuerzo.h"
 
+1570441889 source:c:\users\faby\desktop\nahu\prog - lab i\#clase_13\abmalumnoscompleto\almuerzo.c
+	"almuerzo.h"
+
+1570441889 c:\users\faby\desktop\nahu\prog - lab i\#clase_13\abmalumnoscompleto\almuerzo.h
+	"alumno.h"
+	"comida.h"
+
+1570441889 c:\users\faby\desktop\nahu\prog - lab i\#clase_13\abmalumnoscompleto\alumno.h
+	"carrera.h"
+
+1570441889 c:\users\faby\desktop\nahu\prog - lab i\#clase_13\abmalumnoscompleto\carrera.h
+
+1570441889 c:\users\faby\desktop\nahu\prog - lab i\#clase_13\abmalumnoscompleto\comida.h
+
+1570441889 source:c:\users\faby\desktop\nahu\prog - lab i\#clase_13\abmalumnoscompleto\alumno.c
+	"alumno.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1570441889 source:c:\users\faby\desktop\nahu\prog - lab i\#clase_13\abmalumnoscompleto\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+
+1570441889 source:c:\users\faby\desktop\nahu\prog - lab i\#clase_13\abmalumnoscompleto\comida.c
+	"comida.h"
+
+1571103175 source:c:\users\faby\desktop\nahu\prog - lab i\#clase_13\abmalumnoscompleto\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+	"comida.h"
+	"almuerzo.h"
+
