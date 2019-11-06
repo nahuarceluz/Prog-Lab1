@@ -97,7 +97,7 @@ Employee* agregarEmpleado(Employee* empleado, int* tam, Employee* emp)
 int employee_setId(Employee* empleado,int id)
 {
     int todoOk = 0;
-    if(empleado != NULL)
+    if(empleado != NULL && id >= 10000 && id <= 20000)
     {
         empleado->id = id;
         todoOk = 1;
@@ -131,9 +131,57 @@ int employee_setHorasTrabajadas(Employee* empleado, int horasTrabajadas)
 {
     int todoOk = 0;
 
-    if(empleado != NULL)
+    if(empleado != NULL && horasTrabajadas < 100000)
     {
         empleado->horasTrabajadas = horasTrabajadas;
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int employee_getId(Employee* empleado, int* id)
+{
+    int todoOk = 0;
+
+    if(empleado != NULL && id != NULL)
+    {
+        *id = empleado->id;
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int employee_getNombre(Employee* empleado, char* nombre)
+{
+    int todoOk = 0;
+
+    if(empleado != NULL && nombre != NULL)
+    {
+        strcpy(nombre, empleado->nombre);
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int employee_getHorasTrabajadas(Employee* empleado, int* horasTrabajadas)
+{
+    int todoOk = 0;
+
+    if(empleado != NULL && horasTrabajadas != NULL)
+    {
+        *horasTrabajadas = empleado->horasTrabajadas;
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int employee_getSueldo(Employee* empleado, int* sueldo)
+{
+    int todoOk = 0;
+
+    if(empleado != NULL && sueldo != NULL)
+    {
+        *sueldo = empleado->sueldo;
         todoOk = 1;
     }
     return todoOk;

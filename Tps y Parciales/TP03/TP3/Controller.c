@@ -35,7 +35,7 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_addEmployee(LinkedList** pArrayListEmployee, int tam)
+int controller_addEmployee(LinkedList** pArrayListEmployee)
 {
     int indice;
     int todoOk = 0;
@@ -47,34 +47,41 @@ int controller_addEmployee(LinkedList** pArrayListEmployee, int tam)
     int horasTrabajadas;
     int sueldo;
 
+    Employee empleado;
+    Employee* e;
+
+    e = &empleado;
+
     system("cls");
     printf("****Alta Empleado****\n\n");
 
-    indice = ll_len(pArrayListEmployee);
+    indice = ll_isEmpty(pArrayListEmployee);
 
-    if( indice == -1)
+    if(indice == -1)
     {
         printf("Sistema Completo.\n");
     }
     else
     {
         printf("Ingrese Id: ");
-        scanf("%d", &id);
-        employee_setId(nuevoEmpleado, id);
+        scanf("%d", &e->id);
+        //employee_setId(nuevoEmpleado, id);
 
         printf("Ingrese nombre: ");
         fflush(stdin);
         gets(nombre);
-        employee_setNombre(nuevoEmpleado, nombre);
+        //employee_setNombre(nuevoEmpleado, nombre);
 
         printf("Ingrese horas de trabajo: ");
         scanf("%d", &horasTrabajadas);
-        employee_setHorasTrabajadas(nuevoEmpleado, horasTrabajadas);
+        //employee_setHorasTrabajadas(nuevoEmpleado, horasTrabajadas);
+
         printf("Ingrese sueldo: ");
         scanf("%d", &sueldo);
-        employee_setSueldo(nuevoEmpleado, sueldo);
+        //employee_setSueldo(nuevoEmpleado, sueldo);
 
-        ll_add(pArrayListEmployee, nuevoEmpleado);
+        pArrayListEmployee[indice] = employee_newParametros(id, nombre, horasTrabajadas, sueldo);
+        //ll_add(pArrayListEmployee, nuevoEmpleado);
         todoOk = 1;
         printf("El empleado se dio de alta correctamente!\n");
     }
@@ -125,12 +132,8 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee, int tam)
         }
         todoOk = 1;
     }
-
     return todoOk;
 }
-
-
-
 /** \brief Ordenar empleados
  *
  * \param path char*
@@ -166,4 +169,3 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
 {
     return 1;
 }
-

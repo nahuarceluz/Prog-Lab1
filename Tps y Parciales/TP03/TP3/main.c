@@ -23,7 +23,7 @@
 int main()
 {
     int option = 0;
-    int tam = 0;
+    int tam = 1;
     LinkedList* listaEmpleados = ll_newLinkedList();
     /*do{
         switch(menuEmployee())
@@ -44,14 +44,31 @@ int main()
         system("pause");
     }while(option != 10);*/
 
-    /*controller_addEmployee(listaEmpleados, tam);
-    controller_ListEmployee(listaEmpleados, tam);*/
+    /*Employee empleado;
+    Employee* e;
+
+    e = &empleado;
+
+    //empleado.id = 111;
+    printf("Ingrese id: ");
+    scanf("%d", &e->id);
+
+    printf("%d", e->id);*/
 
 
-    Employee* lista = (Employee*) malloc(sizeof(Employee));
+    /*Employee emp;
+    Employee* e;*/
+
+    controller_addEmployee(listaEmpleados);
+    controller_ListEmployee(listaEmpleados, tam);
+   //printf("%d   %10s       %d        %d\n", e->id, emp.nombre, e->horasTrabajadas, e->sueldo);*/
+
+
+
+    /*Employee* lista = (Employee*) malloc(sizeof(Employee));
     Employee* pEmpleado = employee_newParametros(123, "Manuel", 500, 60000);
     lista = agregarEmpleado(lista, &tam, pEmpleado);
-    controller_ListEmployee(lista, tam);
+    controller_ListEmployee(lista, tam);*/
 
     return 0;
 }
